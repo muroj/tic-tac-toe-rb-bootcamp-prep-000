@@ -21,7 +21,6 @@ def move(board, move_position, player)
   return board
 end
 
-# code your #valid_move? method here
 def valid_move?(board, index)
   return index.between?(0, board.length) && !position_taken?(board, index)
 end
