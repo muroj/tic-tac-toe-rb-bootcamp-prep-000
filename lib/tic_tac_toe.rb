@@ -39,16 +39,23 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  user_input = gets.strip
-  position = input_to_index(user_input)
-  
-  if valid_move?(board, position)
-    move(board, position)
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?(board, index)
+    move(board, index)
     display_board(board)
   else
     turn(board)
   end
 end
+
+# Define your play method below
+def play(board)
+  
+  9.times {
+    turn(board)
+  }
+  
 
 def turn_count(board)
   turns = 0
