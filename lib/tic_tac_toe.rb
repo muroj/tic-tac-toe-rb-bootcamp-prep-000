@@ -18,7 +18,6 @@ end
 # @param <player> - string with value "X" or "O"
 def move(board, move_position, player="X")
   board[move_position] = player
-  
   return board
 end
 
@@ -41,7 +40,6 @@ end
 def turn(board)
   puts "Please enter 1-9:"
   user_input = gets.strip
-  
   position = input_to_index(user_input)
   
   if valid_move?(board, position)
