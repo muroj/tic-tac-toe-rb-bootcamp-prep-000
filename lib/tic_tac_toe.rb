@@ -36,7 +36,20 @@ def position_taken?(board, index)
   else
     return false
   end
+end
+
+def turn(board)
+  puts "Please enter 1-9:"
+  user_input = gets.strip
   
+  position = input_to_index(user_input)
+  
+  if valid_move?(board, position)
+    move(board, position)
+    display_board(board)
+  else
+    turn(board)
+  end
 end
 
 # Define your WIN_COMBINATIONS constant
