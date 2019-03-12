@@ -1,3 +1,8 @@
+#
+# Prints the tic-tac-toe board to stdout
+#
+# @param <board> - game array
+#
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -6,11 +11,15 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-# code your input_to_index and move method here!
+#
+# Converts the user input string to an integer and normalizes to zero-index 
+#
+# @param <user_input> - string containing user input
 def input_to_index(user_input)
   return user_input.to_i() - 1
 end
 
+#
 # Enters the specified <player> into the specified position on the board.
 #
 # @param <board> - game array
@@ -21,6 +30,12 @@ def move(board, move_position, player)
   return board
 end
 
+#
+# Returns true if <index> is a valid position on <board>
+#
+# @param <board> - game array
+# @param <index> - user input
+#
 def valid_move?(board, index)
   return index.between?(0, board.length) && !position_taken?(board, index)
 end
