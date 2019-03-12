@@ -16,7 +16,7 @@ end
 # @param <board> - game array
 # @param <move_position> - index of next move, should be in range 0-8
 # @param <player> - string with value "X" or "O"
-def move(board, move_position, player="X")
+def move(board, move_position)
   board[move_position] = player
   return board
 end
