@@ -52,9 +52,16 @@ end
 # Define your play method below
 def play(board)
   
-  9.times {
+  while !over?(board)
     turn(board)
-  }
+  end
+  
+  if won?(board)
+    puts "Congratulations player #{current_player(board)}!"
+  elsif draw?(board)
+    puts "Game ended in a draw"
+  end
+
 end
 
 def turn_count(board)
