@@ -70,6 +70,7 @@ def play(board)
   end
   
   winning_combo = won?(board)
+  
   if winning_combo
     puts "Congratulations #{board[winning_combo[0]]}!"
   elsif draw?(board)
