@@ -55,7 +55,7 @@ def play(board)
   9.times {
     turn(board)
   }
-  
+end
 
 def turn_count(board)
   turns = 0
